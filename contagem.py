@@ -1,4 +1,9 @@
 import matplotlib.pyplot as plt
+ls = [["0"]] # lista de ritmos começando com 0
+p = [] # lista de quantidade de ritmos por tamanho
+t = 0 # total de ritmos
+b = 2 # base do ritmo
+x = 8 # tamanho máximo do ritmo a ser explorado
 
 def plot(arr):
     y_values = arr  # Replace this with your array
@@ -24,12 +29,7 @@ def R(ls, b):
             C(i, n, j)
     ls.append(n)
     return n
-ls = []
-p = []
-t = 0
-ls.append(["0"])
-b = 2
-x = 8
+
 for i in range(x):
     R(ls,b)
 for i in range(x):
