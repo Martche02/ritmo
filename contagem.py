@@ -19,10 +19,10 @@ def plot(arr):
 
     # Show the plot
     plt.show()
-def C(i, n, f):  
+def C(i, n, f): # Checa se pode-se adicionar f a sequencia
     if str(i[-1]+str(f)) not in i[:-1]:
         n.append(i+str(f))
-def R(ls, b):
+def R(ls, b): # retorna as sequencias que podem ser criadas adicionando mais um ao comprimento
     n = []
     for i in ls[-1]:
         for j in range(b):
@@ -30,11 +30,12 @@ def R(ls, b):
     ls.append(n)
     return n
 
-for i in range(x):
+for i in range(x): # calcula todas as sequencias ate o comprimento x+1
     R(ls,b)
-for i in range(x):
+for i in range(x): # concatena as informações
     p.append(len(ls[i+1])*(b-1))
     t+=p[-1]
     print(p[-1])
+    
 print(ls)
 plot(p)
