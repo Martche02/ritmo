@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 ls = [["0"]] # lista de ritmos começando com 0
 p = [] # lista de quantidade de ritmos por tamanho
 t = 0 # total de ritmos
-b = 2 # base do ritmo
-x = 8 # tamanho máximo do ritmo a ser explorado
+b = 3 # base do ritmo
+x = 12 # tamanho máximo do ritmo a ser explorado
 
 def plot(arr):
     y_values = arr  # Replace this with your array
@@ -36,6 +36,9 @@ for i in range(x): # concatena as informações
     p.append(len(ls[i+1])*(b-1))
     t+=p[-1]
     print(p[-1])
-    
+
 print(ls)
 plot(p)
+import json
+with open('minha_lista.json', 'w') as file:
+    json.dump(ls, file)
